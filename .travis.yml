@@ -1,8 +1,14 @@
 language: ruby
 rvm:
-  - 2.2.1
+- 2.2.1
 script: bundle exec rake
 before_install:
-  - gem update --system
+- gem update --system
 services:
-  - redis-server
+- redis-server
+notifications:
+  on_success: always
+  on_failure: always
+  on_start: always
+  webhooks:
+    secure: "0o3iPQVuQ6u/7tL/2RtYRbWb5v/qjp05mUxt1qEbiCVJ532YRwDqvNrwKHt69m6ODiIxdsVrrfStts78zDjb4UaWCdMHhW84KeADMWJzn4TnjY5h7ilz+XM+v5HfpwuuoThtpXDL8i8tG1HhcYshkIXxOIW4hT2zOhS6RyDDVTWOiaq8lEinfhtu8ng0lBIzkSeUUeqEN/FVxzLm1VWVqr6QelIMVrBXo6WDi3B5rOXvRxwFU3PX4XWeqANF54+sBQuCxrJzJbFJxH/vR09CsCZiuhBGdwUchRIPy6sdfRTaQAQnLkBeyq+R/NCai7oJ1IPSRJK/xrDLZTDXbwhtIBI4611g9VcJYYUn0MJlIvt+TcIleb9kSYmD/HCzkbftTVNFB6UiXUtM+91cPVwa19ymC7fTMgnGbUbPFIebo8HcK2cWSAWU9ujRi33UldDtZaJzar+rvcMhbPN2Nv8PctDow63S1ocicLg2UFDMON8XF9L4aUPmsyUI+mTTsBi0901iIjqAnsi9oQy7V43OvLbrf/AtSVRsPaGvNzandvObD5iq9fHPgJDKNCcUPdX1gx6UxC912aF3fpQYAnxOcedybBb9QtuoAmaFzgOCoGLNtOZOQVub6AZY2LdHxmxm+Hhj+4rWqRs9d8n2ydls5t0mO35xwpWiL159VfgtHXU="
