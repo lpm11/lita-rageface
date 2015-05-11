@@ -6,7 +6,9 @@ module Lita
       config :sort_key, type: Symbol, default: :views
       config :image_key, type: Symbol, default: :png
 
-      route /^rage\s+(.*)/i, :rage, command: false
+      route /^rage\s+(.*)/i, :rage, command: false, help: {
+        "rage QUERY" => "Return the first rage face image for QUERY from alltheragefaces.com."
+      }
 
       def rage(response)
         query = response.matches[0][0]
